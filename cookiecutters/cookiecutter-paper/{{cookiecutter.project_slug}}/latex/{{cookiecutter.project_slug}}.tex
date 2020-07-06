@@ -1,0 +1,90 @@
+\documentclass[final, authoryear, 5p, times]{elsarticle}
+%\documentclass[final, 12pt, review, authoryear, times]{elsarticle}
+\newcommand{\mytitle}{Paper title}
+\newcommand{\myjournal}{Journal}
+\newcommand{\myauthors}{X. Author, Y. Author and Z. Author}
+
+\title{\mytitle}
+\journal{\myjournal}
+
+\usepackage[fleqn]{amsmath}
+\setlength{\mathindent}{5pt}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bm}
+
+\usepackage[breaklinks=true, colorlinks=true, linktocpage=true, pdftitle={\mytitle}, pdfauthor={\myauthors}, pdfsubject={Preprint submitted to \myjournal}, urlcolor=blue]{hyperref}
+
+\usepackage[notref, notcite]{showkeys}
+\renewcommand{\showkeyslabelformat}[1]{\color{red}\normalfont\scriptsize\ttfamily#1}
+
+\usepackage{xcolor}
+
+{% raw %}
+
+\newcommand{\app}{\text{app}}
+\newcommand{\D}{\mathrm d}
+\newcommand{\dbldot}{\mathbin{\mathord{:}}}
+\let\div\undefined
+\DeclareMathOperator{\div}{div}
+\newcommand{\eff}{\mathrm{eff}}
+\DeclareMathOperator{\grad}{\mathbf{grad}}
+\newcommand{\I}{\mathrm i}
+\newcommand{\integers}{\mathbb Z}
+\newcommand{\jump}[1]{[\![#1]\!]}
+\newcommand{\M}{\mathrm{m}}
+\newcommand{\per}{\mathrm{per}}
+\newcommand{\reals}{\mathbb R}
+\DeclareMathOperator{\sym}{\mathbf{sym}}
+\newcommand{\tens}[1]{\vec{#1}}
+\newcommand{\todo}[1]{\color{red}TODO~---~#1\color{black}}
+\renewcommand{\vec}[1]{\bm{\mathrm{#1}}}
+
+{% endraw %}
+
+\bibliographystyle{elsarticle-harv}
+
+\begin{document}
+\begin{frontmatter}
+  \author[adr:1, adr:2]{X. Dupont}\ead{x.dupont@institution.fr}
+  \author[adr:1]{S. Brisard\corref{cor:1}}\ead{sebastien.brisard@univ-eiffel.fr}
+  \address[adr:1]{Navier, Ecole des Ponts, Univ Gustave Eiffel, IFSTTAR, CNRS,
+    Marne-la-Vall\'ee, France}
+  \address[adr:2]{Institution}
+
+  \begin{abstract}
+    This is truly an amazing paper
+  \end{abstract}
+  \begin{keyword}
+    KW1\sep
+    KW2\sep
+    KW3\sep
+    KW4
+  \end{keyword}
+\end{frontmatter}
+
+\section{Introduction}
+
+\citet{kani2003}.
+
+\section{Preliminaries}
+
+\begin{equation}
+  \langle\tens\varepsilon\rangle=\frac1V\int_\Omega\tens\varepsilon\,\D V
+\end{equation}
+
+\begin{equation}
+  \langle\tens\sigma\rangle=\tens C^\eff\dbldot\langle\tens\varepsilon\rangle
+\end{equation}
+
+\bibliography{{'{'}}{{cookiecutter.project_slug}}{{'}'}}
+
+\end{document}
+
+%%% Local Variables:
+%%% coding: iso-latin-1
+%%% fill-column: 80
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
