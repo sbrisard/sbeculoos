@@ -28,28 +28,27 @@ should not change too often.
 
 ### Stylesheet and packages
 
-Until we decide which journal to submit to, we will use Elsevier's templates
-(see
-[documentation](https://www.elsevier.com/authors/author-schemas/latex-instructions)).
-
-We will also use the AMS packages extensively (see
-[documentation](https://ctan.crest.fr/tex-archive/macros/latex/required/amsmath/amsldoc.pdf)). **DO NOT USE THE** `\eqnarray` **ENVIRONMENT!**
-
-In general, use extra packages only if absolutely necessary.
+- Until we decide which journal to submit to, we will use Elsevier's templates
+  (see
+  [documentation](https://www.elsevier.com/authors/author-schemas/latex-instructions)).
+- We will also use the AMS packages extensively (see
+  [documentation](https://ctan.crest.fr/tex-archive/macros/latex/required/amsmath/amsldoc.pdf)). **DO
+  NOT USE THE** `\eqnarray` **ENVIRONMENT!**
+- In general, use extra packages only if absolutely necessary.
 
 ### Writing text
 
 - Use a blank line, rather than `\\` or `\\\\`, to separate two paragraphs.
 - Do not use placement specifiers (such as `[h!]`) for figures (trust
-LaTeX!). These specifiers will be ignored by the journal editor anyway.
+  LaTeX!). These specifiers will be ignored by the journal editor anyway.
 - In general, avoid manual formatting of text (such as `\textsc{fgure}`). Manual
-formatting usually conflicts with the journal stylesheet (and is removed by the
-editor).
-- For double quotes, use `\`\`…''` rather than `"…"`.
+  formatting usually conflicts with the journal stylesheet (and is removed by
+  the editor).
+- For double quotes, use ````…''`` rather than `"…"`.
 - I find it difficult to come up with meaningful (and unique) names for
-`\label{…}` commands. My recommended pattern is `YYYYMMDDHHMMSS`, where `YYYY`
-stands for the year, `MM` stands for the month, etc. This is tedious but
-guarantees uniqueness.
+  `\label{…}` commands. My recommended pattern is `YYYYMMDDHHMMSS`, where `YYYY`
+  stands for the year, `MM` stands for the month, etc. This is tedious but
+  guarantees uniqueness.
 - For references, use unbreakable spaces between the name and the numeric
   reference (e.g. `see Sec.~\ref{sec:20200720152700}`).
 
