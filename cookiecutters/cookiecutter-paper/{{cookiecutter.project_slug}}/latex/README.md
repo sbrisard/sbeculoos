@@ -20,6 +20,8 @@ should not change too often.
 
 ## Style guide
 
+### Stylesheet and packages
+
 Until we decide which journal to submit to, we will use Elsevier's templates
 (see
 [documentation](https://www.elsevier.com/authors/author-schemas/latex-instructions)).
@@ -29,16 +31,17 @@ We will also use the AMS packages extensively (see
 
 In general, use extra packages only if absolutely necessary.
 
-Use a blank line, rather than `\\\\`, to separate two paragraphs.
+### Writing text
 
-Do not use placement specifiers for figures (trust LaTeX!). These specifiers
-will be ignored by the journal editor anyway.
-
-In general, avoid manual formatting of text (such as `\textsc{fgure}`). Manual
+- Use a blank line, rather than `\\\\`, to separate two paragraphs.
+- Do not use placement specifiers (such as `[h!]`) for figures (trust
+LaTeX!). These specifiers will be ignored by the journal editor anyway.
+- In general, avoid manual formatting of text (such as `\textsc{fgure}`). Manual
 formatting usually conflicts with the journal stylesheet (and is removed by the
 editor).
+- Use indices and exponents very sparingly!
 
-Use indices and exponents very sparingly!
+### Writing maths
 
 Some default macros are provided in the `LaTeX` source file. In particular
 
