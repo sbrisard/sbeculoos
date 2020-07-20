@@ -31,6 +31,9 @@ In general, use extra packages only if absolutely necessary.
 
 Use a blank line, rather than `\\\\`, to separate two paragraphs.
 
+Do not use placement specifiers for figures (trust LaTeX!). These specifiers
+will be ignored by the journal editor anyway.
+
 Use indices and exponents very sparingly!
 
 Some default macros are provided in the `LaTeX` source file. In particular
