@@ -1,6 +1,8 @@
 # The `latex/` directory
 
-These rules are important, as they will make the submission process much easier.
+Here are guidelines for the organization of the LaTeX source files. These
+guidelines are important. Following them will make the submission process much
+easier.
 
 All files should be stored in a flat directory structure. In other words, the
 `*.tex`, `*.bib` and `*.pdf` (figures) files should all be stored at the root of
@@ -17,8 +19,6 @@ of the paper (without first reruning the plotting scripts). Besides, these files
 should not change too often.
 
 ## Style guide
-
-**THESE ARE TENTATIVE RULES THAT WE MUST AGREE UPON**
 
 Until we decide which journal to submit to, we will use Elsevier's templates
 (see
