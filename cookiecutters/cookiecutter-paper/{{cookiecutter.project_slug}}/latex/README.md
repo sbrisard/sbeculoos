@@ -20,6 +20,12 @@ should not change too often.
 
 ## Style guide
 
+### Managing the source file
+
+- If possible, configure your editor to hard-wrap the lines at 80
+  characters. This leads to much more readable Git diffs. It also leads to a
+  more accurate PDF↔LaTeX synchronization.
+
 ### Stylesheet and packages
 
 Until we decide which journal to submit to, we will use Elsevier's templates
@@ -33,18 +39,28 @@ In general, use extra packages only if absolutely necessary.
 
 ### Writing text
 
-- Use a blank line, rather than `\\\\`, to separate two paragraphs.
+- Use a blank line, rather than `\\` or `\\\\`, to separate two paragraphs.
 - Do not use placement specifiers (such as `[h!]`) for figures (trust
 LaTeX!). These specifiers will be ignored by the journal editor anyway.
 - In general, avoid manual formatting of text (such as `\textsc{fgure}`). Manual
 formatting usually conflicts with the journal stylesheet (and is removed by the
 editor).
-- Use indices and exponents very sparingly!
+- For double quotes, use `\`\`…''` rather than `"…"`.
+- I find it difficult to come up with meaningful (and unique) names for
+`\label{…}` commands. My recommended pattern is `YYYYMMDDHHMMSS`, where `YYYY`
+stands for the year, `MM` stands for the month, etc. This is tedious but
+guarantees uniqueness.
+- For references, use unbreakable spaces between the name and the numeric
+  reference (e.g. `see Sec.~\ref{sec:20200720152700}`).
 
 ### Writing maths
 
 Some default macros are provided in the `LaTeX` source file. In particular
 
+- Use indices and exponents very sparingly!
+- If possible, use `\(…\)` rather than `$…$` to mark an inline math
+  formulæ. This will make our lives easier in case of refactoring through
+  regexes.
 - `\D` should be used for the differential element, e.g. `\D V` for a volume
   element,
 - `\vec` is used for vectors,
