@@ -34,6 +34,10 @@ Use a blank line, rather than `\\\\`, to separate two paragraphs.
 Do not use placement specifiers for figures (trust LaTeX!). These specifiers
 will be ignored by the journal editor anyway.
 
+In general, avoid manual formatting of text (such as `\textsc{fgure}`). Manual
+formatting usually conflicts with the journal stylesheet (and is removed by the
+editor).
+
 Use indices and exponents very sparingly!
 
 Some default macros are provided in the `LaTeX` source file. In particular
