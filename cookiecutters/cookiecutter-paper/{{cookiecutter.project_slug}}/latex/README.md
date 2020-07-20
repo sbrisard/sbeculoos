@@ -29,6 +29,8 @@ We will also use the AMS packages extensively (see
 
 In general, use extra packages only if absolutely necessary.
 
+Use a blank line, rather than `\\\\`, to separate two paragraphs.
+
 Use indices and exponents very sparingly!
 
 Some default macros are provided in the `LaTeX` source file. In particular
