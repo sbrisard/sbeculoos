@@ -44,7 +44,7 @@ should not change too often.
 - In general, avoid manual formatting of text (such as `\textsc{fgure}`). Manual
   formatting usually conflicts with the journal stylesheet (and is removed by
   the editor).
-- For double quotes, use `` ``…'' `` rather than `"…"`.
+- For double quotes, use ``` ``…'' ``` rather than `"…"`.
 - I find it difficult to come up with meaningful (and unique) names for
   `\label{…}` commands. My recommended pattern is `YYYYMMDDHHMMSS`, where `YYYY`
   stands for the year, `MM` stands for the month, etc. This is tedious but
