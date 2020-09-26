@@ -1,0 +1,5 @@
+{"project_name": "toto",
+ "project_version": "0.1",
+ "project_description": "My awesome library",
+ "project_author": ["Sébastien Brisard", "Laboratoire Navier/Équipe multi-Échelle"],
+ "project_year": 2020}
