@@ -1,17 +1,47 @@
 find_library(MATH_LIBRARY m)
 
-add_library(${PROJECT_NAME} SHARED
+add_library(
+  ${PROJECT_NAME} SHARED
   {{cookiecutter.project_name}}.cpp
   ../include/${PROJECT_NAME}/{{cookiecutter.project_name}}.hpp)
 
-target_include_directories({{cookiecutter.project_name}} PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}../include>
+target_include_directories(
+  ${PROJECT_NAME} PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
   $<INSTALL_INTERFACE:include>)
 
-target_include_directories(${PROJECT_NAME} PUBLIC ../include)
 if (MATH_LIBRARY)
   target_link_libraries(${PROJECT_NAME} ${MATH_LIBRARY})
 endif()
 
-install(TARGETS ${PROJECT_NAME} LIBRARY DESTINATION lib)
-install(DIRECTORY ../include/${PROJECT_NAME} DESTINATION include)
+install(
+  TARGETS ${PROJECT_NAME}
+  DESTINATION lib
+  EXPORT ${PROJECT_NAME}_targets)
+
+install(
+  DIRECTORY ../include/${PROJECT_NAME}
+  DESTINATION include)
+
+install(
+  EXPORT ${PROJECT_NAME}_targets
+  FILE ${PROJECT_NAME}-targets.cmake
+  DESTINATION lib/cmake/${PROJECT_NAME})
+
+include(CMakePackageConfigHelpers)
+
+configure_package_config_file(${CMAKE_CURRENT_SOURCE_DIR}/Config.cmake.in
+  "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config.cmake"
+  INSTALL_DESTINATION "lib/cmake/${PROJECT_NAME}"
+  NO_SET_AND_CHECK_MACRO
+  NO_CHECK_REQUIRED_COMPONENTS_MACRO)
+
+# write_basic_package_version_file(
+#   "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake"
+#   VERSION "${Tutorial_VERSION_MAJOR}.${Tutorial_VERSION_MINOR}"
+#   COMPATIBILITY AnyNewerVersion
+# )
+
+install(FILES
+  ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config.cmake
+  DESTINATION lib/cmake/${PROJECT_NAME})
