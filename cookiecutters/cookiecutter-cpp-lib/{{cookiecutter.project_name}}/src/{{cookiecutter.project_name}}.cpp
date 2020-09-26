@@ -1,4 +1,4 @@
-#include <toto/toto.hpp>
+#include "{{cookiecutter.project_name}}/{{cookiecutter.project_name}}.hpp"
 
 namespace {{cookiecutter.project_name}} {
 
