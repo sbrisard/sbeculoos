@@ -7,7 +7,8 @@ add_library(
 
 target_include_directories(
   ${PROJECT_NAME} PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
+  $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+  $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}/include>
   $<INSTALL_INTERFACE:include>)
 
 if (MATH_LIBRARY)
@@ -18,10 +19,6 @@ install(
   TARGETS ${PROJECT_NAME}
   DESTINATION lib
   EXPORT ${PROJECT_NAME}_targets)
-
-install(
-  DIRECTORY ../include/${PROJECT_NAME}
-  DESTINATION include)
 
 install(
   EXPORT ${PROJECT_NAME}_targets
