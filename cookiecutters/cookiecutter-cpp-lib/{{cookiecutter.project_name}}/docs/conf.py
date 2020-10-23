@@ -19,7 +19,7 @@ project_root = pathlib.Path.cwd().parent
 breathe_projects_source = {
     "{{cookiecutter.project_name}}": (
         str(project_root / "include" / "{{cookiecutter.project_name}}"),
-        ["{{cookiecutter.project_name}}.hpp.in"],
+        ["{{cookiecutter.project_name}}.hpp"],
     )
 }
 
