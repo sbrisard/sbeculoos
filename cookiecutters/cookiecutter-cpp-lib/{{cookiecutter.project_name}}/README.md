@@ -10,7 +10,7 @@ md build
 cd build
 cmake -DCMAKE_INSTALL_PREFIX="C:\opt\{{cookiecutter.project_name}}" ..
 cmake --build .
-cmake --intall .
+cmake --install .
 ```
 
 If relevant (e.g. for the MSVC compiler suite), you can specify the build
