@@ -17,8 +17,8 @@ If relevant (e.g. for the MSVC compiler suite), you can specify the build
 configuration
 
 ```
-cmake --config Release --build .
-cmake --config Release --install .
+cmake --build . --config Release
+cmake --install . --config Release
 ```
 
 To run the tests
