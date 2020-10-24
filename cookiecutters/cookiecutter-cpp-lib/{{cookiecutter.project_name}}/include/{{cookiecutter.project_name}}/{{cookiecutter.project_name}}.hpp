@@ -10,7 +10,7 @@
 
 namespace {{cookiecutter.project_name}}
 {
-  const std::string __author__ = "{{cookiecutter.project_author}}";
+  DllExport std::string author();
 
   DllExport std::string version();
 

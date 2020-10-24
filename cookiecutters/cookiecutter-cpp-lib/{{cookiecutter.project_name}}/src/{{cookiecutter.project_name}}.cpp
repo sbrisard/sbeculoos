@@ -2,6 +2,10 @@
 
 namespace {{cookiecutter.project_name}}
 {
+  std::string author() {
+    return "{{cookiecutter.project_author}}";
+  }
+
   std::string version() {
     // This preprocessor macro is defined in the CMakeLists.txt file
     return PROJECT_VERSION_QUOTED;

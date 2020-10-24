@@ -5,6 +5,7 @@
 
 TEST_CASE("Test case #1") {
   SECTION("Section #1") {
+    REQUIRE({{cookiecutter.project_name}}::author() == "{{cookiecutter.project_author}}");
     REQUIRE({{cookiecutter.project_name}}::version() == "{{cookiecutter.project_version}}");
     REQUIRE({{cookiecutter.project_name}}::return_one() == 1);
   }
