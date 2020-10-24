@@ -1,5 +1,7 @@
 find_library(MATH_LIBRARY m)
 
+add_compile_definitions(PROJECT_VERSION_QUOTED=\"${PROJECT_VERSION}\")
+
 add_library(
   ${PROJECT_NAME} SHARED
   {{cookiecutter.project_name}}.cpp

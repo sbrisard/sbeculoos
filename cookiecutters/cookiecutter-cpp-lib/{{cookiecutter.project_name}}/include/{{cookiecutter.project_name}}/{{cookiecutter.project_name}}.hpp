@@ -8,11 +8,11 @@
 
 #include <string>
 
-namespace {{cookiecutter.project_name}} {
-
-  const std::string __version__ = "{{cookiecutter.project_version}}";
+namespace {{cookiecutter.project_name}}
+{
   const std::string __author__ = "{{cookiecutter.project_author}}";
 
-DllExport int return_one();
+  DllExport std::string version();
 
-}
+  DllExport int return_one();
+}  // namespace {{cookiecutter.project_name}}
