@@ -1,7 +1,7 @@
 {"project_name": "toto",
- "project_repository": "https://github.com/toto/toto",
+ "project_repository": "https://github.com/{{cookiecutter.project_name}}/{{cookiecutter.project_name}}",
  "project_version": "0.1",
  "project_description": "My awesome library",
  "project_author": ["Sébastien Brisard", "Laboratoire Navier/Équipe multi-Échelle"],
  "project_year": 2020,
- "project_pymodule": "pytoto"}
+ "project_pymodule": "py{{cookiecutter.project_name}}"}
