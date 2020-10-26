@@ -1,9 +1,17 @@
 import pathlib
 
+project_root = pathlib.Path.cwd().parent
+
+
+def get_metadata(key):
+    with open(project_root / "metadata" / (key + ".txt"), "r") as f:
+        return f.read()
+
+
 project = "{{cookiecutter.project_name}}"
-copyright = "{{cookiecutter.project_year}}, {{cookiecutter.project_author}}"
-author = "{{cookiecutter.project_author}}"
-release = "{{cookiecutter.project_version}}"
+copyright = get_metadata("year") + ", " + get_metadata("author")
+author = get_metadata("author")
+release = get_metadata("version")
 
 
 extensions = ["sphinx.ext.todo", "breathe"]
@@ -14,7 +22,6 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 todo_include_todos = True
 
-project_root = pathlib.Path.cwd().parent
 
 breathe_projects_source = {
     "{{cookiecutter.project_name}}": (

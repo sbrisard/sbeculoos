@@ -3,5 +3,6 @@
  "project_version": "0.1",
  "project_description": "My awesome library",
  "project_author": ["Sébastien Brisard", "Laboratoire Navier/Équipe multi-Échelle"],
+ "project_email": "sebastien.brisard@univ-eiffel.fr",
  "project_year": 2020,
  "project_pymodule": "py{{cookiecutter.project_name}}"}

@@ -4,14 +4,20 @@ import os.path
 import pybind11
 import setuptools
 
+
+def get_metadata(key):
+    with open(os.path.join("..", "metadata", key+".txt"), "r") as f:
+        return f.read().strip()
+
+
 if __name__ == "__main__":
     metadata = {
         "name": "{{cookiecutter.project_pymodule}}",
-        "version": "version",
-        "author": "author",
+        "version": get_metadata("version"),
+        "author": get_metadata("author"),
         "author_email": "author_email",
-        "description": "description",
-        "url": "url",
+        "description": get_metadata("description"),
+        "url": get_metadata("repository"),
     }
 
     with open(os.path.join("..", "README.md"), "r") as f:
