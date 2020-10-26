@@ -3,7 +3,7 @@
 namespace {{cookiecutter.project_name}}
 {
   std::string author() {
-    return "{{cookiecutter.project_author}}";
+    return PROJECT_AUTHOR_QUOTED;
   }
 
   std::string version() {
