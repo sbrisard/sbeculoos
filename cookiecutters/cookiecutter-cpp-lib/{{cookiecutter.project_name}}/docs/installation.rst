@@ -48,4 +48,24 @@ An executable called ``example_{{cookiecutter.project_name}}`` should be present
 in the ``build/Release`` subdirectory.
 
 
+Building the documentation
+==========================
+
+The documentation of {{cookiecutter.project_name}} requires Sphinx_. The C++ API
+docs are built with Doxygen_ and the Breathe_ extension to Sphinx_.
+
+To build the HTML version of the docs in the ``public`` subdirectory::
+
+  $ cd docs
+  $ sphinx-build -b html . ../public
+
+To build the LaTeX version of the docs::
+
+  $ cd docs
+  $ make latex
+
+
+.. _Breathe: https://breathe.readthedocs.io/
 .. _CMake: https://cmake.org/
+.. _Doxygen: https://www.doxygen.nl/
+.. _Sphinx: https://www.sphinx-doc.org/
