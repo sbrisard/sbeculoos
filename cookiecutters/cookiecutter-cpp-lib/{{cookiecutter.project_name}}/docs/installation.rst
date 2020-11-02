@@ -65,7 +65,31 @@ To build the LaTeX version of the docs::
   $ make latex
 
 
+Installing the Python bindings
+==============================
+
+To install the {{cookiecutter.project_pymodule}} module, ``cd`` into
+the ``python/`` subdirectory and edit the ``setup.cfg`` file. Set the
+``include_dir`` and ``library_dir`` to the appropriate paths. These should be::
+
+  [{{cookiecutter.project_pymodule}}]
+  include_dir = ${CMAKE_INSTALL_PREFIX}/include
+  library_dir = ${CMAKE_INSTLAL_PREFIX}/lib
+
+Then, issue the following command::
+
+  $ python setup.py install --user
+
+or (if you intend to edit the project)::
+
+  $ python setup.py develop --user
+
+To run the tests with Pytest_::
+
+  $ python -m pytest tests
+
 .. _Breathe: https://breathe.readthedocs.io/
 .. _CMake: https://cmake.org/
 .. _Doxygen: https://www.doxygen.nl/
+.. _Pytest: https://docs.pytest.org/
 .. _Sphinx: https://www.sphinx-doc.org/
