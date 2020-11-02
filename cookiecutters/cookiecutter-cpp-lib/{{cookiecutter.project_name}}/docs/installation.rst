@@ -68,9 +68,9 @@ To build the LaTeX version of the docs::
 Installing the Python bindings
 ==============================
 
-To install the {{cookiecutter.project_pymodule}} module, ``cd`` into
-the ``python/`` subdirectory and edit the ``setup.cfg`` file. Set the
-``include_dir`` and ``library_dir`` to the appropriate paths. These should be::
+To install the {{cookiecutter.project_pymodule}} module, ``cd`` into the
+``python`` subdirectory and edit the ``setup.cfg`` file. Set the ``include_dir``
+and ``library_dir`` to the appropriate paths. These should be::
 
   [{{cookiecutter.project_pymodule}}]
   include_dir = ${CMAKE_INSTALL_PREFIX}/include
