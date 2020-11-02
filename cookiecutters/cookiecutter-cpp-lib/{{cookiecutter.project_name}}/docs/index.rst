@@ -10,7 +10,8 @@
    installation
    tutorial
    theory
-   api
+   cpp_api
+   py_api
 
 * :ref:`genindex`
 * :ref:`modindex`

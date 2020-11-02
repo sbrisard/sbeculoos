@@ -14,7 +14,7 @@ author = get_metadata("author")
 release = get_metadata("version")
 
 
-extensions = ["sphinx.ext.todo", "breathe"]
+extensions = ["sphinx.ext.autodoc", "sphinx.ext.todo", "breathe"]
 
 templates_path = ["_templates"]
 
