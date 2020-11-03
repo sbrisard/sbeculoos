@@ -33,25 +33,23 @@ name that you have entered.
 
 ```
 /path/to/projects/myproject
-├───docs
+├───docs            # See below
 │   ├───_build
 │   ├───_static
 │   └───_templates
-├───example
+├───example         # Self-contained example to test the compilation chain
 ├───include
-│   └───myproject
-├───metadata
+│   └───myproject   # Header files
+├───metadata        # See below
 ├───python
-│   ├───pymyproject
-│   └───tests
-├───src
-└───tests
+│   ├───pymyproject # Pybind11 bindings
+│   └───tests       # Pytest unit tests of the bindings
+├───src             # C++ source files
+└───tests           # Catch2 unit tests
 ```
 
-### The `metadata/` subdirectory
-
-This directory contains a few simple text files that hold the metadata of the
-project
+The `metadata/` subdirectory contains a few simple text files that hold the
+metadata of the project
 
 - `author.txt`
 - `description.txt`: short description of the project
@@ -62,33 +60,11 @@ project
 
 These files can be updated any time. The changes should be reflected anywhere
 relevant in the project, save for the `LICENSE` file, which is *never* altered
-automatically.
-
-### The `include/myproject/` subdirectory
-
-Holds the header files of the project.
-
-### The `src/` subdirectory
-
-Holds all `*.cpp` files. Note that the default file exposes two functions
-`author()` and `version()` which return the author(s) and version number of the
+automatically. Note that the default library exposes two functions `author()`
+and `version()` which return the author(s) and version number of the
 library. These functions are statically compiled (they do not read the contents
 of `author.txt` or `version.txt` at each call) but automatically updated when
 the metadata files are modified.
-
-### The `tests/` subdirectory
-
-Holds the [Catch2](https://github.com/catchorg/Catch2) tests of the project.
-
-### The `example/` subdirectory
-
-Holds a very simple example that requires the library to build. This example
-allows to check the overall installation.
-
-### The `python/` subdirectory
-
-Holds the [pybin11](https://pybind11.readthedocs.io) Python bindings and
-[pytest](https://docs.pytest.org/) tests.
 
 ## Documentation
 
