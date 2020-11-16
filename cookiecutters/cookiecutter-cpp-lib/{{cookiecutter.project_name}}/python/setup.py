@@ -15,7 +15,7 @@ if __name__ == "__main__":
         "name": "{{cookiecutter.project_pymodule}}",
         "version": get_metadata("version"),
         "author": get_metadata("author"),
-        "author_email": "author_email",
+        "author_email": "email",
         "description": get_metadata("description"),
         "url": get_metadata("repository"),
     }
